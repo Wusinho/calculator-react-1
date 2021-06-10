@@ -1,9 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Display = (props) => {
-
-   
-  return <div></div>;
+  const { result } = props;
+  return <h5>{result}</h5>;
 };
 
 export default Display;
