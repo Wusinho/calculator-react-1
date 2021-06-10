@@ -6,11 +6,11 @@ import Button from "./Button";
 const result = "0";
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <Display result={result} />
       <ButtonPanel />
       <Button name={""} />
-    </div>
+    </React.Fragment>
   );
 };
 
