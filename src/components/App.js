@@ -5,11 +5,13 @@ import Button from "./Button";
 
 const result = "0";
 const App = () => {
-  <div>
-    <Display result={result} />
-    <ButtonPanel />
-    <Button name={""} />
-  </div>;
+  return (
+    <div>
+      <Display result={result} />
+      <ButtonPanel />
+      <Button name={""} />
+    </div>
+  );
 };
 
 export default App;
