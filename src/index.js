@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import PropTypes from "prop-types"; // ES6
-import Big from "big.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types'; // ES6
+import Big from 'big.js';
 
 const App = () => (
   <div>
@@ -9,4 +9,4 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
