@@ -36,13 +36,10 @@ body {
   grid-column: 3/3;
 }
 
-
-
 main {
   display: flex;
   justify-content: space-between;
-  background:
-    linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(104, 103, 103, 0.8));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(104, 103, 103, 0.8));
   height: 600px;
 }
 
@@ -51,19 +48,17 @@ div.quote {
   margin: 0 auto;
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding: 0 25px ;
+  padding: 0 25px;
 }
 
 header h1 {
   color: rgb(43, 42, 42);
   margin: 5px 0;
   font-size: 25px;
- 
 }
 
 ul {
@@ -75,6 +70,7 @@ ul {
 li {
   padding-left: 24px;
 }
+
 .nav-link,
 .nav-link:visited {
   text-decoration: none;
