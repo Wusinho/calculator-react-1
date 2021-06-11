@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../index.css';
 
 const Display = (props) => {
   const {
     result, partialOp, partialTotal, partialNext,
   } = props;
-
   const partialFunction = (partialOp, partialTotal, partialNext = '') => {
     if (partialOp !== '=') {
       const partialShown = partialNext ? `${partialTotal} ${partialOp} ${partialNext}` : `${partialTotal} ${partialOp}`;
@@ -15,8 +15,8 @@ const Display = (props) => {
   };
   return (
     <div className="display">
-      <h5>{result}</h5>
-      <h5>{partialFunction(partialOp, partialTotal, partialNext)}</h5>
+      <h5 className="resultDisplayer">{result}</h5>
+      <h5 className="partialDisplayer">{partialFunction(partialOp, partialTotal, partialNext)}</h5>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ buttonName, malparido }) => {
-  const handleClick = () => malparido(buttonName);
+const Button = ({ buttonName, buttonNameHandler }) => {
+  const handleClick = () => buttonNameHandler(buttonName);
   return (
     <button type="button" onClick={handleClick}>{buttonName}</button>
   );
@@ -10,7 +10,7 @@ const Button = ({ buttonName, malparido }) => {
 
 Button.propTypes = {
   buttonName: PropTypes.string,
-  malparido: PropTypes.func.isRequired,
+  buttonNameHandler: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {
