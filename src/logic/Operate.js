@@ -16,7 +16,7 @@ const Operate = (numberOne, numberTwo, operation) => {
   if (operation === '=') {
     return num2;
   }
-  return 'not valid operation';
+  return 'Not valid operation';
 };
 
 export default Operate;
