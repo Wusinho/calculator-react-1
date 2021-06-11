@@ -1,36 +1,37 @@
 import React from 'react';
 import Button from './Button';
+import '../index.css';
 
 const ButtonPanel = () => (
   <div>
-    <div className="group-1">
-      <Button name="AC" />
-      <Button name="+/-" />
-      <Button name="%" />
-      <Button name="/" />
+    <div className="group">
+      <Button buttonName="AC" />
+      <Button buttonName="+/-" />
+      <Button buttonName="%" />
+      <Button buttonName="/" />
     </div>
-    <div className="group-2">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="X" />
+    <div className="group">
+      <Button buttonName="7" />
+      <Button buttonName="8" />
+      <Button buttonName="9" />
+      <Button buttonName="x" />
     </div>
-    <div className="group-3">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="-" />
+    <div className="group">
+      <Button buttonName="4" />
+      <Button buttonName="5" />
+      <Button buttonName="6" />
+      <Button buttonName="-" />
     </div>
-    <div className="group-4">
-      <Button name="1" />
-      <Button name="2" />
-      <Button name="3" />
-      <Button name="+" />
+    <div className="group">
+      <Button buttonName="1" />
+      <Button buttonName="2" />
+      <Button buttonName="3" />
+      <Button buttonName="+" />
     </div>
-    <div className="group-5">
-      <Button name="0" />
-      <Button name="." />
-      <Button name="=" />
+    <div className="group2">
+      <Button buttonName="0" />
+      <Button buttonName="." />
+      <Button buttonName="=" />
     </div>
   </div>
 );
