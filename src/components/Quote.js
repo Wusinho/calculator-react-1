@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => (
+const Quote = () => (
   <>
     <h3>Welcome to our page!</h3>
     <p>
@@ -25,4 +25,4 @@ const About = () => (
   </>
 );
 
-export default About;
+export default Quote;
