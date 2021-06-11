@@ -1,32 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/Calculate';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+const App = () => {
+  const [value, setValue] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  render() {
-    const handleClick = (buttonName) => {
-      const result = calculate(this.state, buttonName);
-      this.setState({ ...result });
-    };
-    const { next, total, operation } = this.state;
-    return (
-      <div>
-        <Display result={(next && next.toString()) || (total && total.toString()) || '0'} partialOp={operation || ''} partialTotal={total || ''} partialNext={next || ''} />
-        <ButtonPanel clickHandler={(e) => handleClick(e)} />
-      </div>
-    );
-  }
-}
+  const handleClick = (buttonName) => {
+    const result = calculate(value, buttonName);
+    setValue({ ...result });
+  };
+  const { total, next, operation } = value;
+  return (
+    <div>
+      <Display result={(next && next.toString()) || (total && total.toString()) || '0'} partialOp={operation || ''} partialTotal={total || ''} partialNext={next || ''} />
+      <ButtonPanel clickHandler={(e) => handleClick(e)} />
+    </div>
+  );
+};
 
 export default App;
