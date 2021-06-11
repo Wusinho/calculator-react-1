@@ -1,28 +1,22 @@
 import Big from 'big.js';
 
-const Operate = (input1, input2, operation) => {
-  const inpt1 = Big(input1);
-  const inpt2 = Big(input2);
+const Operate = (numberOne, numberTwo, operation) => {
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
 
-  if (operation === '+') {
-    return inpt1.plus(inpt2).toString();
-  }
-  if (operation === '-') {
-    return inpt1.minus(inpt2).toString();
-  }
-  if (operation === 'x') {
-    return inpt1.times(inpt2).toString();
-  }
   if (operation === '/') {
-    if (inpt2.toString === '0') {
-      return "Can't divide by 0";
-    }
-    return inpt1.div(inpt2).toString();
+    return numberTwo !== '0' ? num1.div(num2) : 'No division by zero';
+  } if (operation === 'X') {
+    return num1.times(num2);
+  } if (operation === '+') {
+    return num1.plus(num2);
+  } if (operation === '-') {
+    return num1.minus(num2);
   }
-  if (operation === '%') {
-    return inpt1.mod(inpt2).toString();
+  if (operation === '=') {
+    return num2;
   }
-  return 'Error: Invalid operation';
+  return 'Not valid operation';
 };
 
 export default Operate;

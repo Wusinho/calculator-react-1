@@ -2,13 +2,31 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import Calculate from '../logic/Calculate';
+import calculate from '../logic/Calculate';
 
-const App = () => (
-  <>
-    <Display result="0" />
-    <ButtonPanel />
-  </>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
+
+  render() {
+    const handleClick = (buttonName) => {
+      const result = calculate(this.state, buttonName);
+      this.setState({ ...result });
+    };
+    const { next, total, operation } = this.state;
+    return (
+      <div>
+        <Display result={(next && next.toString()) || (total && total.toString()) || '0'} partialOp={operation || ''} partialTotal={total || ''} partialNext={next || ''} />
+        <ButtonPanel clickHandler={(e) => handleClick(e)} />
+      </div>
+    );
+  }
+}
 
 export default App;
