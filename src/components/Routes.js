@@ -13,11 +13,6 @@ const Routes = () => (
       <Route path="/calculator" component={App} />
       <Route path="/quote" component={Quote} />
     </Switch>
-    <footer>
-      <span>
-        lol
-      </span>
-    </footer>
   </Router>
 );
 
