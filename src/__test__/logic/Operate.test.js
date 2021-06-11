@@ -1,4 +1,4 @@
-import Operate from '../../logic/operate';
+import Operate from '../../logic/Operate';
 
 describe('Logic operators', () => {
   it('Should return an object', () => {
