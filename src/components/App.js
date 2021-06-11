@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   render() {
-    const clickEventHandler = (buttonName) => {
+    const handleClick = (buttonName) => {
       const result = calculate(this.state, buttonName);
       this.setState({ ...result });
     };
@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <div>
         <Display result={(next && next.toString()) || (total && total.toString()) || '0'} partialOp={operation || ''} partialTotal={total || ''} partialNext={next || ''} />
-        <ButtonPanel buttonClicked={(e) => clickEventHandler(e)} />
+        <ButtonPanel clickHandler={(e) => handleClick(e)} />
       </div>
     );
   }
