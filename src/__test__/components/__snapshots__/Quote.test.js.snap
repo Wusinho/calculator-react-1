@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Quote page 1`] = `
+Array [
+  <h3>
+    Quotes of the day:
+  </h3>,
+  <p>
+    There is no good and bad
+  </p>,
+  <p>
+    It is all a matter of taste
+  </p>,
+]
+`;
